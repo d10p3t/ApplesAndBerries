@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170608 17:01:36.525" generator="Robot 3.0.2 (Python 2.7.13 on linux2)">
+<suite source="/home/petercailipan/CS192Fork/BDD/robotest/Activity Log/routing/activitylog.robot" id="s1" name="Activitylog">
+<test id="s1-t1" name="Go To Activity Log">
+<kw name="Open Browser To Main Menu">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170608 17:01:36.642" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/login'</msg>
+<status status="PASS" endtime="20170608 17:01:39.174" starttime="20170608 17:01:36.642"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170608 17:01:39.345" starttime="20170608 17:01:39.174"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:01:39.346" starttime="20170608 17:01:39.345"></status>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170608 17:01:39.347" level="INFO">Typing text 'edrichhans' into text field 'username'</msg>
+<status status="PASS" endtime="20170608 17:01:40.389" starttime="20170608 17:01:39.347"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:01:40.389" starttime="20170608 17:01:39.346"></status>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170608 17:01:40.392" level="INFO">Typing text 'password' into text field 'password'</msg>
+<status status="PASS" endtime="20170608 17:01:41.495" starttime="20170608 17:01:40.390"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:01:41.496" starttime="20170608 17:01:40.389"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login-button</arg>
+</arguments>
+<msg timestamp="20170608 17:01:41.496" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" endtime="20170608 17:01:42.909" starttime="20170608 17:01:41.496"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:01:42.910" starttime="20170608 17:01:41.496"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Main Menu</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:01:43.618" starttime="20170608 17:01:42.910"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:01:43.931" level="INFO">Current location is 'http://localhost:8000/'.</msg>
+<status status="PASS" endtime="20170608 17:01:43.931" starttime="20170608 17:01:43.619"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:01:43.932" starttime="20170608 17:01:36.642"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>activity-log</arg>
+</arguments>
+<msg timestamp="20170608 17:01:43.933" level="INFO">Clicking element 'activity-log'.</msg>
+<status status="PASS" endtime="20170608 17:01:44.953" starttime="20170608 17:01:43.932"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Activity Log</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:01:45.282" starttime="20170608 17:01:44.953"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${ACTIVITY LOG URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:01:45.589" level="INFO">Current location is 'http://localhost:8000/activity_log'.</msg>
+<status status="PASS" endtime="20170608 17:01:45.590" starttime="20170608 17:01:45.283"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170608 17:01:45.949" starttime="20170608 17:01:45.590"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:01:45.950" critical="yes" starttime="20170608 17:01:36.641"></status>
+</test>
+<doc>A test suite with a test case for navigation to the
+Activity Log Page.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" endtime="20170608 17:01:45.952" starttime="20170608 17:01:36.528"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Activitylog" pass="1">Activitylog</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

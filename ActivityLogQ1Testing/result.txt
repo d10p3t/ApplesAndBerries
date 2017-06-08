@@ -1,0 +1,30 @@
+READFILE:
+Is String: SUCCESS
+Contains JSON: SUCCESS
+
+--------------------------------------------
+TURN DATA TO JSON ARRAY:
+IsValid: SUCCESS
+
+--------------------------------------------
+CHECK DATE PRE-FORMAT:
+First Entry Length Is 10: SUCCESS
+First Entry Has Valid Year: SUCCESS
+First Entry Has Valid Month: SUCCESS
+First Entry Has Valid Day: SUCCESS
+
+Last Entry Length Is 10: SUCCESS
+Last Entry Has Valid Year: SUCCESS
+Last Entry Has Valid Month: SUCCESS
+Last Entry Has Valid Day: SUCCESS
+
+Second Entry Length Is 10: SUCCESS
+Second Entry Has Valid Year: SUCCESS
+Second Entry Has Valid Month: SUCCESS
+Second Entry Has Valid Day: SUCCESS
+
+--------------------------------------------
+CHECK DATE FORMAT:
+First Entry Date Is June 6, 2017: SUCCESS
+Second Entry Date Is June 6, 2017: SUCCESS
+18th Entry Date Is June 7, 2017: SUCCESS

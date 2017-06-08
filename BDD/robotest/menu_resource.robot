@@ -30,29 +30,29 @@ ${BIR URL}        http://localhost:8000/BIR
 ${PHILHEALTH URL}           http://localhost:8000/PH
 ${ADD USER URL}             http://localhost:8000/addUser
 ${DEL USER URL}             http://localhost:8000/deleteUser
+${ACTIVITY LOG URL}         http://localhost:8000/activity_log
 
 *** Keywords ***
 Open Browser To Main Menu
-    Open Browser    ${LOGIN URL}    ${BROWSER}
-    Maximize Browser Window
-    Set Selenium Speed    ${DELAY}
-    Input Username
-    Input Password
-    Submit Credentials
-    Wait Until Page Contains   Apples and Berries Payroll System
-    Location Should Be    ${WELCOME URL}
-
+	Open Browser    ${LOGIN URL}    ${BROWSER}
+	Maximize Browser Window
+	Set Selenium Speed    ${DELAY}
+	Input Username
+	Input Password
+	Submit Credentials
+	Wait Until Page Contains   Apples and Berries Payroll System
+	Location Should Be    ${WELCOME URL}
 
 Input Username
-    Input Text    username    ${username}
+	Input Text    username    ${username}
 
 Input Password
-    Input Text    password    ${password}
+	Input Text    password    ${password}
 
 Submit Credentials
-    Click Button    login-button
+	Click Button    login-button
 
 Go Back Home
 	Click Element   xpath=//body/div/div/div/a[2]
 	Wait Until Page Contains   Apples and Berries Payroll System
-    Location Should Be    ${WELCOME URL}
+	Location Should Be    ${WELCOME URL}

@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170608 17:02:45.587" generator="Robot 3.0.2 (Python 2.7.13 on linux2)">
+<suite source="/home/petercailipan/CS192Fork/BDD/robotest/Activity Log/entries/activitylog.robot" id="s1" name="Activitylog">
+<test id="s1-t1" name="Check Table Entry 1">
+<kw name="Check Table Entry">
+<arguments>
+<arg>2</arg>
+<arg>Employee added</arg>
+<arg>edrichhans</arg>
+<arg>June 6, 2017</arg>
+</arguments>
+<kw name="Go To Activity Log">
+<kw name="Open Browser To Main Menu">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170608 17:02:45.700" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/login'</msg>
+<status status="PASS" endtime="20170608 17:02:48.297" starttime="20170608 17:02:45.699"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170608 17:02:48.468" starttime="20170608 17:02:48.298"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:02:48.469" starttime="20170608 17:02:48.468"></status>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170608 17:02:48.471" level="INFO">Typing text 'edrichhans' into text field 'username'</msg>
+<status status="PASS" endtime="20170608 17:02:49.556" starttime="20170608 17:02:48.470"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:02:49.557" starttime="20170608 17:02:48.469"></status>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170608 17:02:49.558" level="INFO">Typing text 'password' into text field 'password'</msg>
+<status status="PASS" endtime="20170608 17:02:50.676" starttime="20170608 17:02:49.558"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:02:50.677" starttime="20170608 17:02:49.557"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login-button</arg>
+</arguments>
+<msg timestamp="20170608 17:02:50.679" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" endtime="20170608 17:02:52.142" starttime="20170608 17:02:50.678"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:02:52.143" starttime="20170608 17:02:50.677"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Main Menu</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:02:52.936" starttime="20170608 17:02:52.143"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:02:53.248" level="INFO">Current location is 'http://localhost:8000/'.</msg>
+<status status="PASS" endtime="20170608 17:02:53.249" starttime="20170608 17:02:52.936"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:02:53.249" starttime="20170608 17:02:45.699"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>activity-log</arg>
+</arguments>
+<msg timestamp="20170608 17:02:53.251" level="INFO">Clicking element 'activity-log'.</msg>
+<status status="PASS" endtime="20170608 17:02:54.288" starttime="20170608 17:02:53.250"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Activity Log</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:02:54.653" starttime="20170608 17:02:54.289"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${ACTIVITY LOG URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:02:54.966" level="INFO">Current location is 'http://localhost:8000/activity_log'.</msg>
+<status status="PASS" endtime="20170608 17:02:54.966" starttime="20170608 17:02:54.654"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:02:54.967" starttime="20170608 17:02:45.699"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>1</arg>
+<arg>${Type}</arg>
+</arguments>
+<msg timestamp="20170608 17:02:57.105" level="INFO">Cell contains Employee added.</msg>
+<status status="PASS" endtime="20170608 17:02:57.106" starttime="20170608 17:02:54.968"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>2</arg>
+<arg>${DoneBy}</arg>
+</arguments>
+<msg timestamp="20170608 17:02:59.080" level="INFO">Cell contains edrichhans.</msg>
+<status status="PASS" endtime="20170608 17:02:59.081" starttime="20170608 17:02:57.107"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>3</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:01.061" level="INFO">Cell contains June 6, 2017.</msg>
+<status status="PASS" endtime="20170608 17:03:01.062" starttime="20170608 17:02:59.082"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:01.063" starttime="20170608 17:02:45.698"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170608 17:03:01.428" starttime="20170608 17:03:01.064"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:01.428" critical="yes" starttime="20170608 17:02:45.697"></status>
+</test>
+<test id="s1-t2" name="Check Table Entry 2">
+<kw name="Check Table Entry">
+<arguments>
+<arg>3</arg>
+<arg>Employee deleted</arg>
+<arg>edrichhans</arg>
+<arg>June 6, 2017</arg>
+</arguments>
+<kw name="Go To Activity Log">
+<kw name="Open Browser To Main Menu">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:01.441" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/login'</msg>
+<status status="PASS" endtime="20170608 17:03:04.801" starttime="20170608 17:03:01.437"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170608 17:03:05.258" starttime="20170608 17:03:04.801"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:05.260" starttime="20170608 17:03:05.259"></status>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:05.263" level="INFO">Typing text 'edrichhans' into text field 'username'</msg>
+<status status="PASS" endtime="20170608 17:03:06.418" starttime="20170608 17:03:05.262"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:06.420" starttime="20170608 17:03:05.261"></status>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:06.424" level="INFO">Typing text 'password' into text field 'password'</msg>
+<status status="PASS" endtime="20170608 17:03:07.522" starttime="20170608 17:03:06.423"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:07.523" starttime="20170608 17:03:06.421"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login-button</arg>
+</arguments>
+<msg timestamp="20170608 17:03:07.526" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" endtime="20170608 17:03:08.994" starttime="20170608 17:03:07.525"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:08.994" starttime="20170608 17:03:07.524"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Main Menu</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:09.859" starttime="20170608 17:03:08.995"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:10.173" level="INFO">Current location is 'http://localhost:8000/'.</msg>
+<status status="PASS" endtime="20170608 17:03:10.174" starttime="20170608 17:03:09.860"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:10.174" starttime="20170608 17:03:01.435"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>activity-log</arg>
+</arguments>
+<msg timestamp="20170608 17:03:10.175" level="INFO">Clicking element 'activity-log'.</msg>
+<status status="PASS" endtime="20170608 17:03:11.223" starttime="20170608 17:03:10.175"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Activity Log</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:11.589" starttime="20170608 17:03:11.224"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${ACTIVITY LOG URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:11.903" level="INFO">Current location is 'http://localhost:8000/activity_log'.</msg>
+<status status="PASS" endtime="20170608 17:03:11.904" starttime="20170608 17:03:11.590"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:11.904" starttime="20170608 17:03:01.434"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>1</arg>
+<arg>${Type}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:14.066" level="INFO">Cell contains Employee deleted.</msg>
+<status status="PASS" endtime="20170608 17:03:14.067" starttime="20170608 17:03:11.905"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>2</arg>
+<arg>${DoneBy}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:16.045" level="INFO">Cell contains edrichhans.</msg>
+<status status="PASS" endtime="20170608 17:03:16.046" starttime="20170608 17:03:14.068"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>3</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:18.014" level="INFO">Cell contains June 6, 2017.</msg>
+<status status="PASS" endtime="20170608 17:03:18.015" starttime="20170608 17:03:16.047"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:18.016" starttime="20170608 17:03:01.433"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170608 17:03:18.376" starttime="20170608 17:03:18.017"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:18.377" critical="yes" starttime="20170608 17:03:01.431"></status>
+</test>
+<test id="s1-t3" name="Check Table Entry 3">
+<kw name="Check Table Entry">
+<arguments>
+<arg>4</arg>
+<arg>Thirteenth Month Pay Issued</arg>
+<arg>edrichhans</arg>
+<arg>June 6, 2017</arg>
+</arguments>
+<kw name="Go To Activity Log">
+<kw name="Open Browser To Main Menu">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:18.386" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/login'</msg>
+<status status="PASS" endtime="20170608 17:03:21.817" starttime="20170608 17:03:18.384"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170608 17:03:22.298" starttime="20170608 17:03:21.818"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:22.300" starttime="20170608 17:03:22.299"></status>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:22.303" level="INFO">Typing text 'edrichhans' into text field 'username'</msg>
+<status status="PASS" endtime="20170608 17:03:23.410" starttime="20170608 17:03:22.302"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:23.411" starttime="20170608 17:03:22.301"></status>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:23.413" level="INFO">Typing text 'password' into text field 'password'</msg>
+<status status="PASS" endtime="20170608 17:03:24.534" starttime="20170608 17:03:23.412"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:24.535" starttime="20170608 17:03:23.411"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login-button</arg>
+</arguments>
+<msg timestamp="20170608 17:03:24.536" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" endtime="20170608 17:03:25.985" starttime="20170608 17:03:24.536"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:25.985" starttime="20170608 17:03:24.535"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Main Menu</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:26.661" starttime="20170608 17:03:25.985"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:26.975" level="INFO">Current location is 'http://localhost:8000/'.</msg>
+<status status="PASS" endtime="20170608 17:03:26.976" starttime="20170608 17:03:26.662"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:26.976" starttime="20170608 17:03:18.383"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>activity-log</arg>
+</arguments>
+<msg timestamp="20170608 17:03:26.980" level="INFO">Clicking element 'activity-log'.</msg>
+<status status="PASS" endtime="20170608 17:03:27.990" starttime="20170608 17:03:26.977"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Activity Log</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:28.349" starttime="20170608 17:03:27.990"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${ACTIVITY LOG URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:28.662" level="INFO">Current location is 'http://localhost:8000/activity_log'.</msg>
+<status status="PASS" endtime="20170608 17:03:28.663" starttime="20170608 17:03:28.350"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:28.665" starttime="20170608 17:03:18.382"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>1</arg>
+<arg>${Type}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:30.781" level="INFO">Cell contains Thirteenth Month Pay Issued.</msg>
+<status status="PASS" endtime="20170608 17:03:30.781" starttime="20170608 17:03:28.666"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>2</arg>
+<arg>${DoneBy}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:32.755" level="INFO">Cell contains edrichhans.</msg>
+<status status="PASS" endtime="20170608 17:03:32.756" starttime="20170608 17:03:30.782"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>3</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:34.734" level="INFO">Cell contains June 6, 2017.</msg>
+<status status="PASS" endtime="20170608 17:03:34.735" starttime="20170608 17:03:32.757"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:34.736" starttime="20170608 17:03:18.381"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170608 17:03:35.100" starttime="20170608 17:03:34.737"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:35.100" critical="yes" starttime="20170608 17:03:18.379"></status>
+</test>
+<test id="s1-t4" name="Check Table Entry 16">
+<kw name="Check Table Entry">
+<arguments>
+<arg>17</arg>
+<arg>Employee added</arg>
+<arg>edrichhans</arg>
+<arg>June 7, 2017</arg>
+</arguments>
+<kw name="Go To Activity Log">
+<kw name="Open Browser To Main Menu">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:35.103" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/login'</msg>
+<status status="PASS" endtime="20170608 17:03:38.478" starttime="20170608 17:03:35.103"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170608 17:03:38.947" starttime="20170608 17:03:38.479"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:38.949" starttime="20170608 17:03:38.947"></status>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:38.951" level="INFO">Typing text 'edrichhans' into text field 'username'</msg>
+<status status="PASS" endtime="20170608 17:03:40.059" starttime="20170608 17:03:38.951"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:40.059" starttime="20170608 17:03:38.949"></status>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:40.062" level="INFO">Typing text 'password' into text field 'password'</msg>
+<status status="PASS" endtime="20170608 17:03:41.191" starttime="20170608 17:03:40.061"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:41.192" starttime="20170608 17:03:40.060"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login-button</arg>
+</arguments>
+<msg timestamp="20170608 17:03:41.194" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" endtime="20170608 17:03:42.595" starttime="20170608 17:03:41.194"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:42.595" starttime="20170608 17:03:41.192"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Main Menu</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:43.220" starttime="20170608 17:03:42.595"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:43.534" level="INFO">Current location is 'http://localhost:8000/'.</msg>
+<status status="PASS" endtime="20170608 17:03:43.535" starttime="20170608 17:03:43.220"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:43.536" starttime="20170608 17:03:35.102"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>activity-log</arg>
+</arguments>
+<msg timestamp="20170608 17:03:43.537" level="INFO">Clicking element 'activity-log'.</msg>
+<status status="PASS" endtime="20170608 17:03:44.589" starttime="20170608 17:03:43.536"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Activity Log</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:44.950" starttime="20170608 17:03:44.590"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${ACTIVITY LOG URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:45.263" level="INFO">Current location is 'http://localhost:8000/activity_log'.</msg>
+<status status="PASS" endtime="20170608 17:03:45.264" starttime="20170608 17:03:44.950"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:45.264" starttime="20170608 17:03:35.102"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>1</arg>
+<arg>${Type}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:47.433" level="INFO">Cell contains Employee added.</msg>
+<status status="PASS" endtime="20170608 17:03:47.434" starttime="20170608 17:03:45.265"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>2</arg>
+<arg>${DoneBy}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:49.406" level="INFO">Cell contains edrichhans.</msg>
+<status status="PASS" endtime="20170608 17:03:49.407" starttime="20170608 17:03:47.435"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>3</arg>
+<arg>${Date}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:51.373" level="INFO">Cell contains June 7, 2017.</msg>
+<status status="PASS" endtime="20170608 17:03:51.374" starttime="20170608 17:03:49.410"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:51.375" starttime="20170608 17:03:35.102"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170608 17:03:51.736" starttime="20170608 17:03:51.376"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:51.737" critical="yes" starttime="20170608 17:03:35.101"></status>
+</test>
+<test id="s1-t5" name="Check Wrong Entry">
+<kw name="Check Table Entry">
+<arguments>
+<arg>19</arg>
+<arg>Employee added</arg>
+<arg>edrichhans</arg>
+<arg>June 7, 2017</arg>
+</arguments>
+<kw name="Go To Activity Log">
+<kw name="Open Browser To Main Menu">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:51.744" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/login'</msg>
+<status status="PASS" endtime="20170608 17:03:55.085" starttime="20170608 17:03:51.743"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170608 17:03:55.543" starttime="20170608 17:03:55.086"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:55.546" starttime="20170608 17:03:55.544"></status>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:55.548" level="INFO">Typing text 'edrichhans' into text field 'username'</msg>
+<status status="PASS" endtime="20170608 17:03:56.675" starttime="20170608 17:03:55.548"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:56.676" starttime="20170608 17:03:55.546"></status>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170608 17:03:56.677" level="INFO">Typing text 'password' into text field 'password'</msg>
+<status status="PASS" endtime="20170608 17:03:57.755" starttime="20170608 17:03:56.677"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:57.755" starttime="20170608 17:03:56.676"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login-button</arg>
+</arguments>
+<msg timestamp="20170608 17:03:57.758" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" endtime="20170608 17:03:59.144" starttime="20170608 17:03:57.757"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:03:59.145" starttime="20170608 17:03:57.756"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Main Menu</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:03:59.858" starttime="20170608 17:03:59.145"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:04:00.168" level="INFO">Current location is 'http://localhost:8000/'.</msg>
+<status status="PASS" endtime="20170608 17:04:00.168" starttime="20170608 17:03:59.859"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:04:00.169" starttime="20170608 17:03:51.743"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>activity-log</arg>
+</arguments>
+<msg timestamp="20170608 17:04:00.169" level="INFO">Clicking element 'activity-log'.</msg>
+<status status="PASS" endtime="20170608 17:04:01.338" starttime="20170608 17:04:00.169"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Activity Log</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:04:01.674" starttime="20170608 17:04:01.338"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${ACTIVITY LOG URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:04:01.982" level="INFO">Current location is 'http://localhost:8000/activity_log'.</msg>
+<status status="PASS" endtime="20170608 17:04:01.982" starttime="20170608 17:04:01.675"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:04:01.982" starttime="20170608 17:03:51.742"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>1</arg>
+<arg>${Type}</arg>
+</arguments>
+<msg timestamp="20170608 17:04:04.012" level="INFO">Cell contains Check Voucher Issued.</msg>
+<msg timestamp="20170608 17:04:04.322" level="INFO">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="/javascripts/jquery-1.12.4.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="/semantic/dist/semantic.min.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="/javascripts/printThis.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="/bower_components/semantic-ui-calendar/dist/calendar.min.js"&gt;&lt;/script&gt;&lt;link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css" /&gt;&lt;link rel="stylesheet" type="text/css" href="/stylesheets/dataTables.semanticui.min.css" /&gt;&lt;link rel="stylesheet" type="text/css" href="/stylesheets/style.css" /&gt;&lt;link rel="stylesheet" type="text/css" href="/bower_components/semantic-ui-calendar/dist/calendar.min.css" /&gt;&lt;/head&gt;&lt;body&gt;&lt;div id="main-grid" class="ui two column grid"&gt;&lt;div class="row"&gt;&lt;div id="fixed-top-menu" class="ui top inverted borderless mini menu fixed"&gt;&lt;div id="img-logo" href="/" class="item"&gt;&lt;img src="/images/Logo.png" class="logo" /&gt;&lt;/div&gt;&lt;a href="/" class="item"&gt;&lt;i id="home-logo" class="big home icon"&gt;&lt;/i&gt;&lt;div id="company-name" class="item"&gt;&lt;h5&gt;A &amp;amp; B&lt;/h5&gt;&lt;/div&gt;&lt;/a&gt;&lt;div class="ui right floated item"&gt;&lt;a id="activity-log" href="/activity_log" class="item"&gt;&lt;p&gt;Activity Log&lt;/p&gt;&lt;/a&gt;&lt;div class="ui simple dropdown item tabindex=0"&gt;&lt;i class="large user icon"&gt;&lt;/i&gt;&lt;p id="current-user-name"&gt;Admin&lt;/p&gt;&lt;i class="dropdown icon"&gt;&lt;/i&gt;&lt;div class="ui menu"&gt;&lt;a href="/logout" class="item"&gt;&lt;p class="logoff"&gt;Sign Out&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="left-menu-container" class="ui two wide column"&gt;&lt;div id="fixed-left-menu" class="ui fluid vertical labeled icon menu"&gt;&lt;a id="flm-employee-module-button" href="/employees" class="item"&gt;&lt;i class="users icon"&gt;&lt;/i&gt;Employees&lt;/a&gt;&lt;a id="flm-payslip-module-button" href="/payslip_view" class="item"&gt;&lt;i class="money icon"&gt;&lt;/i&gt;Payslip&lt;br /&gt;Module&lt;/a&gt;&lt;a id="flm-AR-module-button" href="/AR_view" class="item"&gt;&lt;i class="file text icon"&gt;&lt;/i&gt;AR&lt;/a&gt;&lt;a id="flm-check-voucher-module-button" href="/checkvoucher_view" class="item"&gt;&lt;i class="payment icon"&gt;&lt;/i&gt;Check&lt;br /&gt;Voucher&lt;/a&gt;&lt;a id="flm-petty-cash-module-button" href="/pettycash_view" class="item"&gt;&lt;i class="money icon"&gt;&lt;/i&gt;Petty Cash&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="main-container" class="ui fourteen wide column"&gt;&lt;title&gt;Activity Log&lt;/title&gt;&lt;div class="ui middle center aligned grid stackable doubling"&gt;&lt;!-- Title--&gt;&lt;div id="menu-row" class="fourteen wide column row"&gt;&lt;div class="ui container"&gt;&lt;h1 class="ui dividing header center aligned"&gt;Activity Log&lt;/h1&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- Table Proper--&gt;&lt;div class="ui container"&gt;&lt;table id="activity-log-table" class="ui celled table selectable"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Done By/Issued By&lt;/th&gt;&lt;th&gt;Date&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Employee added&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Employee deleted&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Thirteenth Month Pay Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Thirteenth Month Pay Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Acknowledgement Receipt Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Acknowledgement Receipt Deleted&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Check Voucher Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Check Voucher Deleted&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Petty Cash Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Petty Cash Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Petty Cash Deleted&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SSS Updated&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PhilHealth Updated&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;BIR Updated&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Employee added&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Employee added&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 7, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Thirteenth Month Pay Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 7, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Check Voucher Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 7, 2017&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript" src="/javascripts/jquery.dataTables.min.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="/javascripts/dataTables.semantic-ui.min.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;var url= window.location.href;
+if(url.length&amp;lt;=22){
+	$('#main-container').removeClass("ui fourteen wide column").addClass("ui sixteen wide column");
+	$('#left-menu-container').hide()
+}
+if(window.location.href.indexOf("employees") &amp;gt; -1) {
+	$('#flm-employee-module-button').css({'color':'#C03130', 'border-bottom':'5px solid #C03130'});
+}
+if(window.location.href.indexOf("payslip") &amp;gt; -1) {
+	$('#flm-payslip-module-button').css({'color':'#C03130', 'border-bottom':'5px solid #C03130'});
+}
+if(window.location.href.indexOf("AR_view") &amp;gt; -1) {
+	$('#flm-AR-module-button').css({'color':'#C03130', 'border-bottom':'5px solid #C03130'});
+}
+if(window.location.href.indexOf("checkvoucher") &amp;gt; -1) {
+	$('#flm-check-voucher-module-button').css({'color':'#C03130', 'border-bottom':'5px solid #C03130'});
+}
+if(window.location.href.indexOf("pettycash") &amp;gt; -1) {
+	$('#flm-petty-cash-module-button').css({'color':'#C03130', 'border-bottom':'5px solid #C03130'});
+}&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170608 17:04:04.787" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170608 17:04:04.790" starttime="20170608 17:04:04.323"></status>
+</kw>
+<msg timestamp="20170608 17:04:04.857" level="FAIL">Cell in table 'activity-log-table' in row #19 and column #1 should have contained text 'Employee added'.</msg>
+<status status="FAIL" endtime="20170608 17:04:04.857" starttime="20170608 17:04:01.983"></status>
+</kw>
+<status status="FAIL" endtime="20170608 17:04:04.858" starttime="20170608 17:03:51.741"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170608 17:04:05.220" starttime="20170608 17:04:04.859"></status>
+</kw>
+<status status="FAIL" endtime="20170608 17:04:05.220" critical="yes" starttime="20170608 17:03:51.739">Cell in table 'activity-log-table' in row #19 and column #1 should have contained text 'Employee added'.</status>
+</test>
+<test id="s1-t6" name="Check Nonexistent Entry">
+<kw name="Check Table Entry">
+<arguments>
+<arg>20</arg>
+<arg>Employee added</arg>
+<arg>edrichhans</arg>
+<arg>June 9, 2017</arg>
+</arguments>
+<kw name="Go To Activity Log">
+<kw name="Open Browser To Main Menu">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170608 17:04:05.225" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/login'</msg>
+<status status="PASS" endtime="20170608 17:04:08.779" starttime="20170608 17:04:05.225"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170608 17:04:09.235" starttime="20170608 17:04:08.779"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:04:09.236" starttime="20170608 17:04:09.236"></status>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170608 17:04:09.238" level="INFO">Typing text 'edrichhans' into text field 'username'</msg>
+<status status="PASS" endtime="20170608 17:04:10.319" starttime="20170608 17:04:09.237"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:04:10.319" starttime="20170608 17:04:09.236"></status>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170608 17:04:10.320" level="INFO">Typing text 'password' into text field 'password'</msg>
+<status status="PASS" endtime="20170608 17:04:11.398" starttime="20170608 17:04:10.320"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:04:11.399" starttime="20170608 17:04:10.319"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login-button</arg>
+</arguments>
+<msg timestamp="20170608 17:04:11.401" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" endtime="20170608 17:04:12.795" starttime="20170608 17:04:11.400"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:04:12.795" starttime="20170608 17:04:11.400"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Main Menu</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:04:13.750" starttime="20170608 17:04:12.796"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:04:14.056" level="INFO">Current location is 'http://localhost:8000/'.</msg>
+<status status="PASS" endtime="20170608 17:04:14.056" starttime="20170608 17:04:13.751"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:04:14.057" starttime="20170608 17:04:05.224"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>activity-log</arg>
+</arguments>
+<msg timestamp="20170608 17:04:14.058" level="INFO">Clicking element 'activity-log'.</msg>
+<status status="PASS" endtime="20170608 17:04:15.163" starttime="20170608 17:04:14.057"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Activity Log</arg>
+</arguments>
+<status status="PASS" endtime="20170608 17:04:15.498" starttime="20170608 17:04:15.163"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${ACTIVITY LOG URL}</arg>
+</arguments>
+<msg timestamp="20170608 17:04:15.805" level="INFO">Current location is 'http://localhost:8000/activity_log'.</msg>
+<status status="PASS" endtime="20170608 17:04:15.805" starttime="20170608 17:04:15.498"></status>
+</kw>
+<status status="PASS" endtime="20170608 17:04:15.806" starttime="20170608 17:04:05.223"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="Selenium2Library">
+<doc>Verifies that a certain cell in a table contains `expected`.</doc>
+<arguments>
+<arg>activity-log-table</arg>
+<arg>${Row}</arg>
+<arg>1</arg>
+<arg>${Type}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170608 17:04:17.910" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170608 17:04:17.910" starttime="20170608 17:04:17.457"></status>
+</kw>
+<msg timestamp="20170608 17:04:17.910" level="INFO">Cell in table activity-log-table in row #20 and column #1 could not be found.</msg>
+<msg timestamp="20170608 17:04:18.221" level="INFO">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="/javascripts/jquery-1.12.4.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="/semantic/dist/semantic.min.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="/javascripts/printThis.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="/bower_components/semantic-ui-calendar/dist/calendar.min.js"&gt;&lt;/script&gt;&lt;link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css" /&gt;&lt;link rel="stylesheet" type="text/css" href="/stylesheets/dataTables.semanticui.min.css" /&gt;&lt;link rel="stylesheet" type="text/css" href="/stylesheets/style.css" /&gt;&lt;link rel="stylesheet" type="text/css" href="/bower_components/semantic-ui-calendar/dist/calendar.min.css" /&gt;&lt;/head&gt;&lt;body&gt;&lt;div id="main-grid" class="ui two column grid"&gt;&lt;div class="row"&gt;&lt;div id="fixed-top-menu" class="ui top inverted borderless mini menu fixed"&gt;&lt;div id="img-logo" href="/" class="item"&gt;&lt;img src="/images/Logo.png" class="logo" /&gt;&lt;/div&gt;&lt;a href="/" class="item"&gt;&lt;i id="home-logo" class="big home icon"&gt;&lt;/i&gt;&lt;div id="company-name" class="item"&gt;&lt;h5&gt;A &amp;amp; B&lt;/h5&gt;&lt;/div&gt;&lt;/a&gt;&lt;div class="ui right floated item"&gt;&lt;a id="activity-log" href="/activity_log" class="item"&gt;&lt;p&gt;Activity Log&lt;/p&gt;&lt;/a&gt;&lt;div class="ui simple dropdown item tabindex=0"&gt;&lt;i class="large user icon"&gt;&lt;/i&gt;&lt;p id="current-user-name"&gt;Admin&lt;/p&gt;&lt;i class="dropdown icon"&gt;&lt;/i&gt;&lt;div class="ui menu"&gt;&lt;a href="/logout" class="item"&gt;&lt;p class="logoff"&gt;Sign Out&lt;/p&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="left-menu-container" class="ui two wide column"&gt;&lt;div id="fixed-left-menu" class="ui fluid vertical labeled icon menu"&gt;&lt;a id="flm-employee-module-button" href="/employees" class="item"&gt;&lt;i class="users icon"&gt;&lt;/i&gt;Employees&lt;/a&gt;&lt;a id="flm-payslip-module-button" href="/payslip_view" class="item"&gt;&lt;i class="money icon"&gt;&lt;/i&gt;Payslip&lt;br /&gt;Module&lt;/a&gt;&lt;a id="flm-AR-module-button" href="/AR_view" class="item"&gt;&lt;i class="file text icon"&gt;&lt;/i&gt;AR&lt;/a&gt;&lt;a id="flm-check-voucher-module-button" href="/checkvoucher_view" class="item"&gt;&lt;i class="payment icon"&gt;&lt;/i&gt;Check&lt;br /&gt;Voucher&lt;/a&gt;&lt;a id="flm-petty-cash-module-button" href="/pettycash_view" class="item"&gt;&lt;i class="money icon"&gt;&lt;/i&gt;Petty Cash&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="main-container" class="ui fourteen wide column"&gt;&lt;title&gt;Activity Log&lt;/title&gt;&lt;div class="ui middle center aligned grid stackable doubling"&gt;&lt;!-- Title--&gt;&lt;div id="menu-row" class="fourteen wide column row"&gt;&lt;div class="ui container"&gt;&lt;h1 class="ui dividing header center aligned"&gt;Activity Log&lt;/h1&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- Table Proper--&gt;&lt;div class="ui container"&gt;&lt;table id="activity-log-table" class="ui celled table selectable"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Done By/Issued By&lt;/th&gt;&lt;th&gt;Date&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Employee added&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Employee deleted&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Thirteenth Month Pay Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Thirteenth Month Pay Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Acknowledgement Receipt Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Acknowledgement Receipt Deleted&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Check Voucher Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Check Voucher Deleted&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Petty Cash Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Petty Cash Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Petty Cash Deleted&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SSS Updated&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PhilHealth Updated&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;BIR Updated&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Employee added&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 6, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Employee added&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 7, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Thirteenth Month Pay Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 7, 2017&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Check Voucher Issued&lt;/td&gt;&lt;td&gt;edrichhans&lt;/td&gt;&lt;td&gt;June 7, 2017&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript" src="/javascripts/jquery.dataTables.min.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="/javascripts/dataTables.semantic-ui.min.js"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;var url= window.location.href;
+if(url.length&amp;lt;=22){
+	$('#main-container').removeClass("ui fourteen wide column").addClass("ui sixteen wide column");
+	$('#left-menu-container').hide()
+}
+if(window.location.href.indexOf("employees") &amp;gt; -1) {
+	$('#flm-employee-module-button').css({'color':'#C03130', 'border-bottom':'5px solid #C03130'});
+}
+if(window.location.href.indexOf("payslip") &amp;gt; -1) {
+	$('#flm-payslip-module-button').css({'color':'#C03130', 'border-bottom':'5px solid #C03130'});
+}
+if(window.location.href.indexOf("AR_view") &amp;gt; -1) {
+	$('#flm-AR-module-button').css({'color':'#C03130', 'border-bottom':'5px solid #C03130'});
+}
+if(window.location.href.indexOf("checkvoucher") &amp;gt; -1) {
+	$('#flm-check-voucher-module-button').css({'color':'#C03130', 'border-bottom':'5px solid #C03130'});
+}
+if(window.location.href.indexOf("pettycash") &amp;gt; -1) {
+	$('#flm-petty-cash-module-button').css({'color':'#C03130', 'border-bottom':'5px solid #C03130'});
+}&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<msg timestamp="20170608 17:04:18.224" level="FAIL">Cell in table 'activity-log-table' in row #20 and column #1 should have contained text 'Employee added'.</msg>
+<status status="FAIL" endtime="20170608 17:04:18.224" starttime="20170608 17:04:15.806"></status>
+</kw>
+<status status="FAIL" endtime="20170608 17:04:18.225" starttime="20170608 17:04:05.222"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170608 17:04:18.583" starttime="20170608 17:04:18.226"></status>
+</kw>
+<status status="FAIL" endtime="20170608 17:04:18.583" critical="yes" starttime="20170608 17:04:05.221">Cell in table 'activity-log-table' in row #20 and column #1 should have contained text 'Employee added'.</status>
+</test>
+<doc>A test suite with a test case for the checking of valid
+and invalid entries.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="FAIL" endtime="20170608 17:04:18.586" starttime="20170608 17:02:45.589"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="4">Critical Tests</stat>
+<stat fail="2" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Activitylog" pass="4">Activitylog</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

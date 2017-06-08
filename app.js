@@ -18,13 +18,14 @@ var financials = require('./routes/financials');
 var employees = require('./routes/employees');
 var login = require('./routes/login');
 var backup = require('./routes/backup');
+var activity_log = require('./routes/activity_log');
 
 var app = express();
 var MongoClient = mongo.MongoClient;
 
 app.listen(8000);
 
-console.log('> server running on port 8000');	
+console.log('> server running on port 8000');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -60,6 +61,7 @@ app.use('/', login);
 app.use('/', financials);
 app.use('/employees', employees);
 app.use('/backup', backup);
+app.use('/activity_log', activity_log);
 
 
 app.get('/', function(req, res, next) {

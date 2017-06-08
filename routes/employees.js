@@ -27,7 +27,9 @@ router.get('/add', function(req, res, next){
 router.post('/addemployee', function(req, res){
 	console.log("pasok");
 	addEmployeeRoute.insert(req, res, function(){
-		winston.log('info', 'Employee added');
+		winston.log('info', 'Employee added', {
+			issuedBy: req.session.username
+		});
 		res.redirect('/employees');
 	});
 });
@@ -42,7 +44,9 @@ router.get('/delete', function(req, res, next){
 
 router.post('/deleteEmployee', function(req, res){
 	editEmployeeRoute.delete(req, res, function(){
-		winston.log('info', 'Employee deleted');
+		winston.log('info', 'Employee deleted', {
+			issuedBy: req.session.username
+		});
 		res.redirect('/');
 	});
 });
@@ -58,12 +62,12 @@ router.get('/editEmployee', function(req, res){
 router.post('/editEmployee', function(req, res){
 	editEmployeeRoute.postEdit(req, res, function(err, doc){
 		res.redirect('/');
-		winston.log('info', 'Employee edited');
-
+		winston.log('info', 'Employee edited', {
+			issuedBy: req.session.username
+		});
 	});
 });
 
-////
 router.get('/', function(req, res){
 	var db = req.db;
 	var Employees = db.get("Employees");

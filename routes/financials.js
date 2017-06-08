@@ -172,6 +172,10 @@ router.post('/checkvoucher', function(req, res){
 
 router.post('/deleteCheckvoucher', function(req, res){
 	checkVoucherRoute.remove(req, res, function(err, doc){
+		wlogger.log('info', 'Check Voucher Deleted', {
+			issuedBy: req.session.username,
+			issuedTo: req.body.name
+		});
 		console.log("errdoc", err, doc);
 		if(err){
 			res.json({"error": err, "status": 500});
@@ -200,6 +204,10 @@ router.post('/pettycash', function(req, res){
 
 router.post('/deletePettycash', function(req, res){
 	pettyCashRoute.remove(req, res, function(err, doc){
+		wlogger.log('info', 'Petty Cash Deleted', {
+			issuedBy: req.session.username,
+			issuedTo: req.body.name
+		});
 		console.log("errdoc", err, doc);
 		if(err){
 			res.json({"error": err, "status": 500});
@@ -228,6 +236,10 @@ router.post('/AR', function(req, res){
 
 router.post('/deleteAR', function(req, res){
 	ARRoute.remove(req, res, function(err, doc){
+		wlogger.log('info', 'Acknowledgement Receipt Deleted', {
+			issuedBy: req.session.username,
+			issuedTo: req.body.name
+		});
 		console.log("errdoc", err, doc);
 		if(err){
 			res.json({"error": err, "status": 500});
@@ -267,7 +279,7 @@ router.post('/updateSSSComp', function(req, res){
 			res.status(500).end();
 		}
 		else{
-			wlogger.log('info', 'SSS Updated!', {
+			wlogger.log('info', 'SSS Updated', {
 				issuedBy: req.session.username,
 			});
 			res.redirect('/');
@@ -281,7 +293,7 @@ router.post('/updatePHComp', function(req, res){
 			res.status(500).end();
 		}
 		else{
-			wlogger.log('info', 'PhilHealth Updated!', {
+			wlogger.log('info', 'PhilHealth Updated', {
 				issuedBy: req.session.username,
 			});
 			res.redirect('/');
@@ -293,7 +305,7 @@ router.post('/updateBIRComp', function(req, res){
 	updateCompRoute.updateBIR(req, res, function(err){
 		if(err) res.status(500).end();
 		else{
-			wlogger.log('info', 'BIR Updated!', {
+			wlogger.log('info', 'BIR Updated', {
 				issuedBy: req.session.username
 			});
 			res.redirect('/');
@@ -387,17 +399,6 @@ router.get('/indexFinancials', function(req, res, next){
 
 router.get('/updateTables', function(req, res, next){
 	res.render('updateTables');
-});
-
-router.get('/activity_log', function(req, res, next){
-	res.render('activity_log');
-});
-
-router.get('/log', function(req, res, next){
-	console.log("at log");
-	var p = path.resolve('log.log');
-
-	res.sendFile(p);
 });
 
 module.exports = router;

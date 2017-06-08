@@ -14,28 +14,14 @@ block content
 				thead
 					tr
 						th Type
-						th Issued By
+						th Done By/Issued By
 						th Date
 				tbody
-					each item, index in log
-						tr.entry(data-an= item.adviceNumber)
+					each item in act_log
+						tr
 							td= item.message
 							td= item.issuedBy
 							td= item.timestamp
 
-	script(type='text/javascript').
-		var log;
-
-		$.ajax({
-			type: "GET",
-			url: "/log",
-			dataType: "json",
-			success: function(data) {
-				console.log(data);
-				log = data;
-			}
-		});
-
-		$(document).ready(function(){
-			$('#activity-log-table').DataTable();
-		});
+	script(type='text/javascript', src='/javascripts/jquery.dataTables.min.js')
+	script(type='text/javascript', src='/javascripts/dataTables.semantic-ui.min.js')

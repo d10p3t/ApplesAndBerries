@@ -1,0 +1,18 @@
+{"issuedBy":"edrichhans","level":"info","message":"Employee added","timestamp":"2017-06-06T02:24:28.380Z"}
+{"issuedBy":"edrichhans","level":"info","message":"Employee deleted","timestamp":"2017-06-06T02:24:47.802Z"}
+{"issuedBy":"edrichhans","issuedTo":"86","level":"info","message":"Thirteenth Month Pay Issued","timestamp":"2017-06-06T02:26:33.954Z"}
+{"issuedBy":"edrichhans","issuedTo":"86","level":"info","message":"Thirteenth Month Pay Issued","timestamp":"2017-06-06T02:27:37.445Z"}
+{"issuedBy":"edrichhans","issuedTo":"Peter Test","level":"info","message":"Acknowledgement Receipt Issued","timestamp":"2017-06-06T02:33:13.737Z"}
+{"issuedBy":"edrichhans","level":"info","message":"Acknowledgement Receipt Deleted","timestamp":"2017-06-06T02:38:41.485Z"}
+{"issuedBy":"edrichhans","issuedTo":"Peter Test","level":"info","message":"Check Voucher Issued","timestamp":"2017-06-06T02:40:14.485Z"}
+{"issuedBy":"edrichhans","level":"info","message":"Check Voucher Deleted","timestamp":"2017-06-06T02:40:26.625Z"}
+{"issuedBy":"edrichhans","issuedTo":"Petty Test","level":"info","message":"Petty Cash Issued","timestamp":"2017-06-06T02:40:54.812Z"}
+{"issuedBy":"edrichhans","issuedTo":"Pty Cash","level":"info","message":"Petty Cash Issued","timestamp":"2017-06-06T02:41:46.652Z"}
+{"issuedBy":"edrichhans","level":"info","message":"Petty Cash Deleted","timestamp":"2017-06-06T02:41:53.320Z"}
+{"issuedBy":"edrichhans","level":"info","message":"SSS Updated","timestamp":"2017-06-06T02:42:25.657Z"}
+{"issuedBy":"edrichhans","level":"info","message":"PhilHealth Updated","timestamp":"2017-06-06T02:42:41.357Z"}
+{"issuedBy":"edrichhans","level":"info","message":"BIR Updated","timestamp":"2017-06-06T02:42:50.975Z"}
+{"issuedBy":"edrichhans","level":"info","message":"Employee added","timestamp":"2017-06-06T03:27:56.693Z"}
+{"issuedBy":"edrichhans","level":"info","message":"Employee added","timestamp":"2017-06-07T02:08:48.110Z"}
+{"issuedBy":"edrichhans","issuedTo":"89","level":"info","message":"Thirteenth Month Pay Issued","timestamp":"2017-06-07T02:59:16.601Z"}
+{"issuedBy":"edrichhans","issuedTo":"sdsdf","level":"info","message":"Check Voucher Issued","timestamp":"2017-06-07T15:56:52.841Z"}
